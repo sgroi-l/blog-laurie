@@ -7,9 +7,15 @@ export default function Home() {
       {allPosts.map((post) => (
         <article key={post._id}>
           <Link href={post.slug}>
-            <h2>{post.title}</h2>
+            <h2 className="mb-0">{post.title}</h2>
           </Link>
-          {post.description && <p>{post.description}</p>}
+          <span className="text-xs">
+            {new Date(post.date).toLocaleDateString("en-GB", {
+              year: "numeric",
+              month: "long",
+              day: "numeric",
+            })}
+          </span>          {post.description && <p>{post.description}</p>}
         </article>
       ))}
     </div>
