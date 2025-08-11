@@ -1,5 +1,6 @@
 import { allPosts } from "@/.contentlayer/generated";
 import Link from "next/link";
+import { TagList } from "@/components/tag-list";
 
 export default function Home() {
   return (
@@ -10,13 +11,16 @@ export default function Home() {
             <h2 className="mb-0">
               <Link href={post.slug}>{post.title}</Link>
             </h2>
-            <span className="text-xs">
-              {new Date(post.date).toLocaleDateString("en-GB", {
-                year: "numeric",
-                month: "long",
-                day: "numeric",
-              })}
-            </span>
+            <div className="flex flex-col gap-2 mb-2">
+              <span className="text-xs">
+                {new Date(post.date).toLocaleDateString("en-GB", {
+                  year: "numeric",
+                  month: "long",
+                  day: "numeric",
+                })}
+              </span>
+              <TagList tags={post.tags} />
+            </div>
             {post.description && <p>{post.description}</p>}
           </article>
         ))
