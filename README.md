@@ -1,7 +1,14 @@
-# Next.js + Contentlayer
+# s g r o i
 
-A template with Next.js 13 app dir, Contentlayer, Tailwind CSS and dark mode.
+Personal blog built with Next.js 13, Contentlayer, and Tailwind CSS.
 
-https://next-contentlayer.vercel.app
+## Getting Started
+
+```bash
+pnpm install
+pnpm dev
+```
+
+Open [http://localhost:3000](http://localhost:3000) to view the site.
 
 
