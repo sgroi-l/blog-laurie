@@ -3,7 +3,7 @@ const { withContentlayer } = require("next-contentlayer");
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  turbopack: {},
+  swcMinify: true,
 };
 
 module.exports = withContentlayer(nextConfig);
